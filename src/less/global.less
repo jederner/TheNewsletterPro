@@ -1,0 +1,291 @@
+body {
+    background-color: @white;
+    font-family: "Arial Bold","Arial";
+    .font-size(14px);
+    color: @gray;
+}
+
+header {
+    display: block;
+    border-bottom: solid @orange 5px;
+    width: 100%;
+    height: 6em;
+    #logo {
+        display: inline-block;
+        width: 200px;
+        height: 65px;
+        background: url(images/logo_m.png) no-repeat;
+        margin: 1em;
+    }
+    #signout {
+        margin: 1em 1em 0 0;
+        float: right;
+        font-size: 0.7em;
+    }
+}
+
+a {
+    color: #28f;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    border-bottom: solid #dadada 1px;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+h2 {
+    font-size: 1.15em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+p {
+    margin: 1em 0;
+}
+
+/* Tables */
+table:not(.noStyle) {
+    th {
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
+        padding: 0.5em;
+    }
+    tr {
+        &:nth-child(even) {
+            background: #eaeaea;
+        }
+        &:nth-child(odd) {
+            background: @gray-light
+        }
+        &:hover {
+            background-color: #fa0;
+        }
+    }
+    td {
+        padding: 0.5em;
+
+    }
+}
+/* End tables */
+
+.dateMe {
+    width: 7em;
+}
+
+.ghost {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.active {
+    color: #080;
+}
+
+.inactive {
+    color: #aaa;
+}
+
+.error {
+    background-color:#faa;
+    color: #a22;
+}
+
+.displayMessage {
+    border: solid #dadada 1px;
+    .border-radius(5px);
+    text-align: center;
+    padding: 1em;
+    margin: 0.5em;
+    background-color: #eaeaea;
+}
+
+.totalBox {
+    min-width: 6em;
+    border: solid #e6e6e6 1px;
+    width: 3em;
+    display: table-cell;
+    margin: 0.5em;
+    padding: 1.5em;
+    background-color: #f0f0f0;
+    .border-radius(5px);
+    label {
+        clear:both;
+        text-decoration: underline;
+    }
+    div {
+        &.value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-left: 1em;
+            margin-top: 0.5em;
+        }
+    }
+}
+
+/* Clear fix */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+/* End Clear fix */
+
+input[type="text"], input[type="password"], select {
+    .border-radius(5px);
+    height: 2.5em;
+    padding: 0.5em;
+    margin: 0.25em 0 0.25em;
+}
+
+#main-container {
+    margin:0.5em;
+}
+
+/* Login Page */
+#login {
+    display: block;
+    margin: auto 0;
+    border: solid @gray-light 1px;
+    padding: @padding-sm;
+    .border-radius(5px);
+    text-align: center;
+    input {
+        margin: 1em auto;
+    }
+}
+/* End login page */
+
+/* Clients page */
+table#clients {
+    width: 100%;
+    th {
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline;
+        background: #fff;
+    }
+    tr:nth-child(even) {background: #eaeaea;}
+    tr:nth-child(odd) {background: @gray-light}
+    tr:hover {
+        background-color: #fa0;
+    }
+    td {
+        padding: 1em;
+        text-align: center;
+    }
+}
+
+table.dataTable tbody {
+    tr:nth-child(even) {background: #eaeaea;}
+    tr:nth-child(odd) {background: @gray-light}
+    tr:hover {
+        background-color: #fa0;
+    }	
+}
+
+table.tblClientDetails {
+    td:first-child {
+        padding-right:1em;
+        text-align:right;
+    }
+}
+
+#clientDetailTableHolder {
+    width: 100%;
+    table {
+        width: 30%;
+        margin: 0 1%;
+        border: solid #cacaca 1px;
+    }
+}
+
+.checkFilter {
+    float: left;
+    margin-left: 1.5em;
+}
+
+.secondaryContact {
+    border: solid #eaeaea 1px;
+    display: block;
+    padding: 1em;
+    float: left;
+    line-height: 1.5em;
+    margin-right: 0.5em;
+    &.noLine {
+        border: none;
+    }
+}
+/* End clients page */
+
+/* Messaging */
+
+/* End messaging */
+
+/* Custom Reports */
+#customReportCheckList, #customReportResults {
+    border: solid #eaeaea 1px;
+    margin-right: 1em;
+    background-color: #d8eaff;
+    padding: 1em;
+    .border-radius(5px);
+}
+
+#customReportResults {
+    background-color: #ffeae0;
+}
+
+.fieldHeight {
+    height: auto;
+    span {
+        display:block;
+    }
+}
+/* End Custom Reports */
+
+@media only screen and (min-width : 768px) {
+    header {
+        #signout {
+            font-size: 1em;
+            .greeting {
+                margin-top: 2.5em;
+            }
+        }
+    }
+    #main-container {
+        margin:2em;
+    }
+}
